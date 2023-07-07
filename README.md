@@ -1,4 +1,7 @@
 # PiBCI
+Author: Mario De Lorenzo
+Email: mario.de_lorenzo@tu-dresden
+
 Opensource GUI to connect any Bluetooth/WiFi board to a Raspberry Pi4. The goal is to make BCI projects accessible and easy to do for everybody and for any budgets.
 
 The available portable BCI devices can be expensive and hard to use especially for people with no experience and training. More advanced electroencephalography can even cost tens or hundreds of thousands of dollars. This project shows it is possible to conduct neuroscience experiments and to build modern portable BCI devices while still having high performances and make it accessible to everybody.
