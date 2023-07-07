@@ -1,3 +1,8 @@
+#Created by Mario De Lorenzo, mario.de_lorenzo@tu-dresden.de, 30.06.23
+#GUI to connect via Bluetooth with a Raspberry Pi4 (tested) with a microcontroller with ESP32 or Bluetooth.
+#This GUI is ideal to test your prototype of BCI and create new ones.
+#For now it can plot data in real-time, save data in a csv file after Motor Imagery session, and perform preprocessing, feature extraction, and ML (SVM and DNN)
+
 import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter import messagebox, filedialog
@@ -13,9 +18,9 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 from sklearn.model_selection import train_test_split
-#from tensorflow.keras.models import Sequential
-#from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
-#from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+from tensorflow.keras.utils import to_categorical
 from sklearn.metrics import accuracy_score
 
 from PIL import Image, ImageTk
@@ -28,9 +33,9 @@ import random
 import bluetooth 
 import time
 
-target_address = "A8:03:2A:EB:03:16"
+target_address = "YOUR MAC ADDRESS OF THE MICROCONTROLLER BOARD"
 
-port = 1
+port = 1 #Your choice of port, you don't need to change it
 
 class EEGAnalysisApp(tk.Tk):
     def __init__(self):
@@ -223,7 +228,7 @@ class EEGAnalysisApp(tk.Tk):
         csp_data = self.perform_csp(filtered_data)
 
         self.perform_svm(csp_data, labels)
-        #self.perform_cnn(csp_data, labels)
+        self.perform_cnn(csp_data, labels)
 
 
 
