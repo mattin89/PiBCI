@@ -1,3 +1,8 @@
+#Created by Mario De Lorenzo, mario.de_lorenzo@tu-dresden.de
+#Same GUI as PiGUI but this one doesn't connect via Bluetooth.
+#This GUI will randomly generate values instead to plot and save real ones.
+#It is ideal to test functions and other stuff.
+
 import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter import messagebox, filedialog
